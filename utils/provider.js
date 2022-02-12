@@ -2,7 +2,7 @@ import { useContext, useState, createContext } from "react";
 
 const initialStates = {
     theme: "default",
-    setTheme: ()=>{}
+    setTheme: ()=>{},
 }
 
 const MyContext = createContext(initialStates)

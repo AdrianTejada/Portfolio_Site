@@ -1,3 +1,13 @@
+@font-face {
+  font-family:'Gothic';
+  src: url('../public/AllRoundGothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source';
+  src: url('../public/SourceCodePro-Medium.ttf') format('truetype');
+}
+
 html,
 body {
   padding: 0;

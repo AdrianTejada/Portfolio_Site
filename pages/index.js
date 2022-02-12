@@ -11,12 +11,20 @@ const MainCont = styled.div`
   align-items: center;
 `
 
+const Header = styled.div`
+  font-size: 100px;
+  font-family: 'Gothic';
+`
+
 export default function Home() {
-  const r = useRouter()
+  // const router = useRouter()
   
   return <MainCont>
-    <Menu/>
-    Home
+    <Menu currentRoute="index"/>
+
+    <Header>
+      Home
+    </Header>
   </MainCont>
 }
  

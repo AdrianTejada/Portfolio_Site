@@ -1,6 +1,3 @@
-each page is basially a component
+to do list:
 
-index.js will have a bunch of if statements and will return the page that you have selected
-
-each page will have a useEffect that runs when the provider which is the theme
-
+get the basic layout of all the pages without animation

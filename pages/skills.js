@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
+import { Menu } from "@/comps/Menu"
 
 const MainCont = styled.div`
     width: 100vh;
@@ -10,10 +11,19 @@ const MainCont = styled.div`
     background-color: white;
 `
 
+const Header = styled.div`
+  font-size: 100px;
+  font-family: 'Gothic';
+`
+
+
 export default function Skills ({
 
 }) {
     return <MainCont>
-        skills
+        <Menu currentRoute="skills"/>
+        <Header>
+            SKILLS
+        </Header>
     </MainCont>
 }

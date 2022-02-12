@@ -1,3 +1,5 @@
 to do list:
 
 get the basic layout of all the pages without animation
+
+scale background down when the hamburger menu is clicked WOOWOWOWOWOWOWOOOOO

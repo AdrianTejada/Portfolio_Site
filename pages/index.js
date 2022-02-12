@@ -1,5 +1,4 @@
 import { useProvider } from "@/utils/provider"
-import { useRouter } from "next/router"
 import styled from "styled-components"
 import { Menu } from "@/comps/Menu"
 
@@ -11,20 +10,58 @@ const MainCont = styled.div`
   align-items: center;
 `
 
-const Header = styled.div`
-  font-size: 100px;
-  font-family: 'Gothic';
+const HeroCont = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 `
 
-export default function Home() {
-  // const router = useRouter()
-  
+const Hello = styled.div`
+  font-size: 72px;
+  font-family: 'Gothic';
+  margin-bottom: -40px;
+`
+
+const Name = styled.div`
+  font-size: 180px;
+  font-family: 'Gothic';
+  margin-bottom: -40px;
+`
+
+const SubCont = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+`
+
+const Emoticon = styled.div`
+  font-size: 56px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 50px;
+`
+
+const SubText = styled.div`
+  font-size: 32px;
+  font-family: 'Source';
+  color: #8C8C8C;
+`
+
+
+export default function Home() {  
   return <MainCont>
     <Menu currentRoute="index"/>
 
-    <Header>
-      Home
-    </Header>
+    <HeroCont>
+      <Hello>Hi, my name's</Hello>
+      <Name>ADRIAN TEJADA</Name>
+      <SubCont>
+        <Emoticon>{`(`}&nbsp;&nbsp;&nbsp;-&nbsp;ω&nbsp;-&nbsp;{`)ﾉ`}</Emoticon>
+        <SubText>Front-End Developer & Motion Graphics Designer</SubText>
+      </SubCont>
+    </HeroCont>
+
   </MainCont>
 }
  

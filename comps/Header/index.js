@@ -3,10 +3,8 @@ import Baffle from 'baffle-react'
 import TypeIt from "typeit-react"
 
 const HeaderCont = styled.div`
-    width: 100%;
-    height: 200px;
-    margin-left: 70px;
-    margin-right: 70px;
+    width: 90%;
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,20 +12,18 @@ const HeaderCont = styled.div`
 `
 
 const HeaderText = styled.div`
-    font-size: 180px;
+    font-size: 150px;
     font-family: 'Gothic'; 
 `
 const Line = styled.div`
     width: 100%;
-    height: 20px;
+    height: 10px;
     background-color: black;
-`
-
+`  
 
 export const Header = ({
     erase=false,
     text="",
-    play=false
 }) => {
     return <HeaderCont>
     <div>
@@ -35,10 +31,9 @@ export const Header = ({
         <HeaderText>
             <Baffle
                 speed={100}
-                obfuscate={play}
+                obfuscate={false}
                 characters="░▒█▒▓▒▓█▓▒░█▒█▒▒▒░░░▒▓▒"
                 revealDuration={3000}
-                style={{fontSize: "30px"}}
             >
                 {text}
             </Baffle>
@@ -48,5 +43,6 @@ export const Header = ({
             <TypeIt>{text}</TypeIt>
         </HeaderText>}
     </div>
+    <Line/>
     </HeaderCont>
 }

@@ -3,3 +3,14 @@ to do list:
 get the basic layout of all the pages without animation
 
 scale background down when the hamburger menu is clicked WOOWOWOWOWOWOWOOOOO
+
+Header comp:
+- change name to text
+- prop for text
+- color
+- font
+
+
+this should auto size?
+
+maybe try getting it to erase itself today after reading the documentation

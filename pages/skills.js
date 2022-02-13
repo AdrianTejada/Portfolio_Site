@@ -1,29 +1,33 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
+
 import { Menu } from "@/comps/Menu"
+import { Header } from "@/comps/Header"
 
 const MainCont = styled.div`
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
 `
 
-const Header = styled.div`
-  font-size: 100px;
-  font-family: 'Gothic';
+const Line = styled.div`
+    width: 100%;
+    height: 20px;
+    background-color: black;
 `
 
 
 export default function Skills ({
 
 }) {
+    const [page, setPage] = useState(false)
+
     return <MainCont>
         <Menu currentRoute="skills"/>
-        <Header>
-            SKILLS
-        </Header>
+            <Header
+                erase={false}
+                text="My Skill Set"
+                />
+        <Line/>
     </MainCont>
 }

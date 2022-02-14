@@ -3,7 +3,7 @@ import Baffle from 'baffle-react'
 import TypeIt from "typeit-react"
 
 const HeaderCont = styled.div`
-    width: 90%;
+    width: 100%;
     height: 220px;
     display: flex;
     flex-direction: column;

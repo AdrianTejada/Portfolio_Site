@@ -1,16 +1,25 @@
 to do list:
 
-get the basic layout of all the pages without animation
+design:
+    boxes for portfolio pieces
+    design about
 
-scale background down when the hamburger menu is clicked WOOWOWOWOWOWOWOOOOO
+pages:
+    Development
+    motion
+    about
+    contact
+    redo menu to look like buttons
 
-Header comp:
-- change name to text
-- prop for text
-- color
-- font
+ux stuff:
+    scale down background & gradual blur when the menu is opened
+    hover on all menu buttons
+    erase text when changing pages
+    expand lines, and progress bar when opening a pages
+    opening and closing menu animation
+    loading animation
+    waving guy animation
+    when you open a page all text fades in apple style
 
 
-this should auto size?
-
-maybe try getting it to erase itself today after reading the documentation
+HENRY QUESTION GET COMPONENT TO PASS OUT VALUE

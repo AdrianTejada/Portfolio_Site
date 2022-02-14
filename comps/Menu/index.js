@@ -106,14 +106,14 @@ export const Menu =  ({
                     if (currentRoute != "motion") {
                         setTimeout(()=>{router.push('/motion')},500)
                     }
-                }}>Motion Graphics</MenuItems>
+                }}>Motion</MenuItems>
 
                 <MenuItems onClick={()=>{
                     setOp(-1)
                     if (currentRoute != "about") {
                         setTimeout(()=>{router.push('/about')},500)
                     }
-                }}>About Me</MenuItems>
+                }}>About</MenuItems>
 
                 <MenuItems onClick={()=>{
                     setOp(-1)

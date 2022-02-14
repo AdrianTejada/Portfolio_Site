@@ -4,11 +4,12 @@ import TypeIt from "typeit-react"
 
 const HeaderCont = styled.div`
     width: 100%;
-    height: 220px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 10px;
 `
 
 const HeaderText = styled.div`
@@ -19,6 +20,7 @@ const Line = styled.div`
     width: 100%;
     height: 10px;
     background-color: black;
+    border-radius: 3px;
 `  
 
 export const Header = ({

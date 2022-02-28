@@ -2,18 +2,16 @@ to do list:
 
 design:
     boxes for portfolio pieces
-    design about
+    design contact
+
 
 pages:
     Development
     motion
-    about
     contact
-    redo menu to look like buttons
 
 ux stuff:
-    scale down background & gradual blur when the menu is opened
-    hover on all menu buttons
+    scale down background when menu is opened
     erase text when changing pages
     expand lines, and progress bar when opening a pages
     opening and closing menu animation

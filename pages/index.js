@@ -59,7 +59,7 @@ export default function Home() {
   return <MainCont>
     <Menu currentRoute="index"/>
       <TextCont>
-        <Hello>Hi, my name's</Hello>
+        <Hello>Hi, my name&apos;s</Hello>
         <Name>ADRIAN TEJADA</Name>
         <SubCont>
           <Emoticon>{`(`}&nbsp;&nbsp;&nbsp;-&nbsp;ω&nbsp;-&nbsp;{`)ﾉ`}</Emoticon>

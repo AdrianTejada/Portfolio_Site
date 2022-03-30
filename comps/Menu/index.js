@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
 
-import styled, { isStyledComponent } from "styled-components"
+import styled from "styled-components"
 
 const IconCont = styled.div`
-    position: absolute;
+    position: sticky;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,6 +15,8 @@ const IconCont = styled.div`
     transition: z-index .6s;
     width: 50px;
     height: 40px;
+    align-self: flex-end;
+
 `
 
 const Line = styled.div`
@@ -89,13 +91,6 @@ export const Menu =  ({
 
                 <MenuItems onClick={()=>{
                     setOp(-1)
-                    if (currentRoute != "skills") {
-                        setTimeout(()=>{router.push('/skills')},500)
-                    }
-                }}>Skills</MenuItems>
-
-                <MenuItems onClick={()=>{
-                    setOp(-1)
                     if (currentRoute != "development") {
                         setTimeout(()=>{router.push('/development')},500)
                     }
@@ -114,13 +109,6 @@ export const Menu =  ({
                         setTimeout(()=>{router.push('/about')},500)
                     }
                 }}>About</MenuItems>
-
-                <MenuItems onClick={()=>{
-                    setOp(-1)
-                    if (currentRoute != "contact") {
-                        setTimeout(()=>{router.push('/contact')},500)
-                    }
-                }}>Contact</MenuItems>
         </MenuCont>
     </>
 }

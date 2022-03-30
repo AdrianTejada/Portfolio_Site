@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { Menu } from '@/comps/Menu'
 import { Header } from '@/comps/Header'
-import { DevProjectCont } from "@/comps/ProjectCont"
+// import { DevProjectCont } from "@/comps/ProjectCont"
 
 const MainCont = styled.div`
     width: 100vw;
@@ -30,8 +30,6 @@ export default function Development ({
                 erase={false}
                 text="Development"
             />
-
-            <DevProjectCont/>
         </Cont>
     </MainCont>
 }

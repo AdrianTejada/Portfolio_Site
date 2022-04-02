@@ -3,6 +3,8 @@ import { Menu } from "@/comps/Menu"
 import { Header } from "@/comps/Header"
 import { SubHead } from "@/comps/SubHead"
 import { Text } from "@/comps/Text"
+import { TypeEffect } from "@/comps/TypeEffect"
+import { Colon } from "@/comps/Colon"
 
 const MainCont = styled.main`
   width: 100vw;
@@ -10,8 +12,8 @@ const MainCont = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: -100vh;
 `
-
 
 const TextCont = styled.div`
   width: 90%;
@@ -64,29 +66,55 @@ const SkillsCont = styled.div`
 `
 
 const Line = styled.div`
-  width: 100%;
+  margin-top: 290px;
+  width: 90%;
   height: 6px;
   background-color: black;
-  margin-top: 300px;
-
 `
 
+const BigCont = styled.div`
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+`
 
 export default function Home() {  
   return <MainCont>
       <Menu currentRoute="index"/>
 
       <TextCont>
-        <Hello>Hi, my name&apos;s</Hello>
-        <Name>ADRIAN TEJADA</Name>
+        <Hello>
+          <TypeEffect
+            text="Hi, my name&#x27;s"
+          />
+          </Hello>
+        <Name>
+          <TypeEffect
+            text="ADRIAN TEJADA"
+          />
+        </Name>
         <SubCont>
-          <Emoticon>{`(`}&nbsp;&nbsp;&nbsp;-&nbsp;ω&nbsp;-&nbsp;{`)ﾉ`}</Emoticon>
-          <SubText>Front-End Developer & Motion Graphics Designer</SubText>
+          <Emoticon>
+            <TypeEffect
+              text="(&nbsp;&nbsp;&nbsp;-&nbsp;ω&nbsp;-&nbsp;)ﾉ"
+            />
+          </Emoticon>
+          <SubText>
+            <TypeEffect
+              text="Front-End Developer & Motion Graphics Designer"
+            />
+          </SubText>
         </SubCont>
       </TextCont>
+      
+      
+      <Line/>
+      <BigCont>
+      <Colon/>
 
       <SkillsCont>
-        <Line/>
           <Header
             text="My Skill Set"
           />
@@ -104,12 +132,14 @@ export default function Home() {
           />
 
           <Text
-            text="
-            Mostly self taught, I’ve always loved any form of animation and motion graphics. Originally doing this for fun for friends and family, I eventully started doing work for small businesses and local artists."
+            text="Mostly self taught, I’ve always loved any form of animation and motion graphics. Originally doing this for fun for friends and family, I eventully started doing work for small businesses and local artists."
           />
 
 
       </SkillsCont>
+      </BigCont>
+
+      
   </MainCont>
 }
  

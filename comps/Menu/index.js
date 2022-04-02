@@ -29,7 +29,7 @@ const Line = styled.div`
 `
 
 const MenuCont = styled.div`
-    position: absolute;
+    position: sticky;
     top: 0px;
     width: 100vw;
     height: 100vh;

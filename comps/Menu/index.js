@@ -12,7 +12,7 @@ const IconCont = styled.div`
     top: 20px;
     right: 20px;  
     z-index:${props=>props.z};
-    transition: z-index .6s;
+    transition: z-index .4s;
     width: 50px;
     height: 40px;
     align-self: flex-end;
@@ -23,7 +23,7 @@ const Line = styled.div`
     width: 100%;
     height: 6px;
     background-color: ${props=>props.bg};
-    transition: background-color .6s;
+    transition: background-color .4s;
     border-radius: 3px;
 
 `
@@ -38,7 +38,7 @@ const MenuCont = styled.div`
     justify-content: space-evenly;
     align-items: center;
     backdrop-filter: blur(10px);
-    transition: opacity .6s, backdrop-filter .6s, z-index .6s;
+    transition: opacity .4s, backdrop-filter .4s, z-index .4s;
     opacity: ${props=>props.op};
     z-index: ${props=>props.z};
 `
@@ -65,48 +65,79 @@ const MenuItems = styled.div`
 `
 
 export const Menu =  ({
-    currentRoute=""
+    currentRoute="",
+    OnOpen=()=>{}
 }) => {
     const [op, setOp] = useState(-1)
+    const [transition, isTransitioning] = useState(false)
 
     
     const router = useRouter()
 
 
     return <>
-            <IconCont onClick={()=>setOp(op===-1?1:-1)} z={op===-1?1:2}>
+            <IconCont onClick={()=>{
+                if (transition == false) {
+                    isTransitioning(true)
+                    setOp(op===-1?1:-1)
+                    OnOpen(op)
+                    setTimeout(()=>{isTransitioning(false)},400)
+                }
+
+                }} z={op===-1?1:2}>
                 <Line bg={op===-1?"black":"#8C8C8C"}/>
                 <Line bg={op===-1?"black":"#8C8C8C"}/>
                 <Line bg={op===-1?"black":"#8C8C8C"}/>
             </IconCont>
             
 
-            <MenuCont op={op} z={op} onClick={()=>setOp(-1)}> 
-                <MenuItems onClick={()=>{
+            <MenuCont op={op} z={op} onClick={()=>{
+
+                if (transition == false) {
+                    isTransitioning(true)
                     setOp(-1)
-                    if (currentRoute != "index") {
-                        setTimeout(()=>{router.push('/')},500)
+                    OnOpen(op)
+                    setTimeout(()=>{isTransitioning(false)},600)
+                }
+
+                }}> 
+                <MenuItems onClick={()=>{
+                    if (transition=== false) {
+                        setOp(-1)
+                        if (currentRoute != "index") {
+                            setTimeout(()=>{router.push('/')},500)
+                        }
+                        OnOpen(op)
                     }
                 }}>Home</MenuItems>
 
                 <MenuItems onClick={()=>{
-                    setOp(-1)
-                    if (currentRoute != "development") {
-                        setTimeout(()=>{router.push('/development')},500)
+                    if (transition === false) {
+                        setOp(-1)
+                        if (currentRoute != "development") {
+                            setTimeout(()=>{router.push('/development')},500)
+                        }
+                        OnOpen(op)
                     }
                 }}>Development</MenuItems>
 
                 <MenuItems onClick={()=>{
-                    setOp(-1)
-                    if (currentRoute != "motion") {
-                        setTimeout(()=>{router.push('/motion')},500)
+                    if (transition === false) {
+                        setOp(-1)
+                        if (currentRoute != "motion") {
+                            setTimeout(()=>{router.push('/motion')},500)
+                        }
+                        OnOpen(op)
                     }
                 }}>Motion</MenuItems>
 
                 <MenuItems onClick={()=>{
-                    setOp(-1)
-                    if (currentRoute != "about") {
-                        setTimeout(()=>{router.push('/about')},500)
+                    if (transition === false) {
+                        setOp(-1)
+                        if (currentRoute != "about") {
+                            setTimeout(()=>{router.push('/about')},500)
+                        }
+                        OnOpen(op)
                     }
                 }}>About</MenuItems>
         </MenuCont>

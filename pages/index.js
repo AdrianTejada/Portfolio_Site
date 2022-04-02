@@ -5,6 +5,7 @@ import { SubHead } from "@/comps/SubHead"
 import { Text } from "@/comps/Text"
 import { TypeEffect } from "@/comps/TypeEffect"
 import { Colon } from "@/comps/Colon"
+import { useState } from "react"
 
 const MainCont = styled.main`
   width: 100vw;
@@ -13,6 +14,13 @@ const MainCont = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: -100vh;
+`
+
+const ScaleDiv = styled.div`
+  transform: scale(${props=>props.scale});
+  transition-property: transform;
+  transition: transform .6s;
+  z-index: ${props=>props.z};
 `
 
 const TextCont = styled.div`
@@ -80,10 +88,23 @@ const BigCont = styled.div`
   justify-content: space-between;
 `
 
-export default function Home() {  
-  return <MainCont>
-      <Menu currentRoute="index"/>
+export default function Home() { 
+  const [scale, setScale] = useState(1)
+  const [z, setZ] = useState(1)
 
+  return <MainCont>
+      <Menu currentRoute="index" OnOpen={(e)=>{
+        setScale(e)
+        if (e === 1) {
+          setTimeout(()=>{
+            setZ(1)
+          },400)
+        } else {
+          setZ(-2)
+        }
+      }}/>
+
+      <ScaleDiv scale={scale===1?1:.97} z={z}>
       <TextCont>
         <Hello>
           <TypeEffect
@@ -139,6 +160,7 @@ export default function Home() {
       </SkillsCont>
       </BigCont>
 
+      </ScaleDiv>
       
   </MainCont>
 }

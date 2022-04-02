@@ -5,7 +5,8 @@ import { SubHead } from "@/comps/SubHead"
 import { Text } from "@/comps/Text"
 import { TypeEffect } from "@/comps/TypeEffect"
 import { Colon } from "@/comps/Colon"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
 
 const MainCont = styled.main`
   width: 100vw;
@@ -91,6 +92,17 @@ const BigCont = styled.div`
 export default function Home() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
+  const [wave, setWave] = useState(1)
+
+  // useEffect(()=>{
+  //   setInterval(()=>{
+  //     if (wave == 1 ) {
+  //       setWave(2)
+  //     } else {
+  //       setWave(1)
+  //     }
+  //   },1000)
+  // },[])
 
   return <MainCont>
       <Menu currentRoute="index" OnOpen={(e)=>{
@@ -104,7 +116,7 @@ export default function Home() {
         }
       }}/>
 
-      <ScaleDiv scale={scale===1?1:.97} z={z}>
+      <ScaleDiv scale={scale===1?1:.98} z={z}>
       <TextCont>
         <Hello>
           <TypeEffect

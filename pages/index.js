@@ -48,6 +48,9 @@ const Name = styled.h1`
   margin-bottom: -40px;
   margin-top: 0px;
   font-weight: normal;
+  @media only screen and (max-width: 700px) {
+    font-size: 70px;
+  }
 `
 
 const SubCont = styled.div`
@@ -76,9 +79,10 @@ const SkillsCont = styled.div`
 
 const Line = styled.div`
   margin-top: 290px;
-  width: 90%;
+  width: 90vw;
   height: 6px;
   background-color: black;
+  border-radius: 2px;
 `
 
 const BigCont = styled.div`
@@ -92,17 +96,6 @@ const BigCont = styled.div`
 export default function Home() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
-  const [wave, setWave] = useState(1)
-
-  // useEffect(()=>{
-  //   setInterval(()=>{
-  //     if (wave == 1 ) {
-  //       setWave(2)
-  //     } else {
-  //       setWave(1)
-  //     }
-  //   },1000)
-  // },[])
 
   return <MainCont>
       <Menu currentRoute="index" OnOpen={(e)=>{
@@ -117,60 +110,53 @@ export default function Home() {
       }}/>
 
       <ScaleDiv scale={scale===1?1:.98} z={z}>
-      <TextCont>
-        <Hello>
-          <TypeEffect
-            text="Hi, my name&#x27;s"
-          />
-          </Hello>
-        <Name>
-          <TypeEffect
-            text="ADRIAN TEJADA"
-          />
-        </Name>
-        <SubCont>
-          <Emoticon>
+        <TextCont>
+          <Hello>
             <TypeEffect
-              text="(&nbsp;&nbsp;&nbsp;-&nbsp;ω&nbsp;-&nbsp;)ﾉ"
+              text="Hi, my name&#x27;s"
             />
-          </Emoticon>
-          <SubText>
+            </Hello>
+          <Name>
             <TypeEffect
-              text="Front-End Developer & Motion Graphics Designer"
+              text="ADRIAN TEJADA"
             />
-          </SubText>
-        </SubCont>
-      </TextCont>
+          </Name>
+          <SubCont>
+            <Emoticon>
+              <TypeEffect
+                text="(&nbsp;&nbsp;&nbsp;-&nbsp;ω&nbsp;-&nbsp;)ﾉ"
+              />
+            </Emoticon>
+            <SubText>
+              <TypeEffect
+                text="Front-End Developer & Motion Graphics Designer"
+              />
+            </SubText>
+          </SubCont>
+        </TextCont>
       
       
-      <Line/>
-      <BigCont>
-      <Colon/>
-
-      <SkillsCont>
-          <Header
-            text="My Skill Set"
-          />
-
-          <SubHead
-            text="Front End Development"
-          />
-
-          <Text
-            text="Thanks to my 2 years spent at the Digital Design and Development at BCIT, I have experience building web-applications in team environments using React.js, JavaScript, HTML, and CSS. My favorite parts of Front End Development are mapping out data from API’s on to the front-end, and coding out UI/UX interactions and animations."
-          />
-
-          <SubHead
-            text="Motion Graphics"
-          />
-
-          <Text
-            text="Mostly self taught, I’ve always loved any form of animation and motion graphics. Originally doing this for fun for friends and family, I eventully started doing work for small businesses and local artists."
-          />
-
-
-      </SkillsCont>
-      </BigCont>
+        <Line/>
+        <BigCont>
+        <Colon/>
+        <SkillsCont>
+            <Header
+              text="My Skill Set"
+            />
+            <SubHead
+              text="Front End Development"
+            />
+            <Text
+              text="Thanks to my 2 years spent at the Digital Design and Development at BCIT, I have experience building web-applications in team environments using React.js, JavaScript, HTML, and CSS. My favorite parts of Front End Development are mapping out data from API’s on to the front-end, and coding out UI/UX interactions and animations."
+            />
+            <SubHead
+              text="Motion Graphics"
+            />
+            <Text
+              text="Mostly self taught, I’ve always loved any form of animation and motion graphics. Originally doing this for fun for friends and family, I eventully started doing work for small businesses and local artists."
+            />
+        </SkillsCont>
+        </BigCont>
 
       </ScaleDiv>
       

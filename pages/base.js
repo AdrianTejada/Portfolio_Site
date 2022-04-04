@@ -42,7 +42,7 @@ export default function REPLACE_THIS() {
   const [z, setZ] = useState(1)
 
   return <MainCont>
-      <Menu currentRoute="development" OnOpen={(e)=>{
+      <Menu currentRoute="REPLACE_THIS" OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {
           setTimeout(()=>{
@@ -66,3 +66,4 @@ export default function REPLACE_THIS() {
       </ScaleDiv>
   </MainCont>
 }
+ 

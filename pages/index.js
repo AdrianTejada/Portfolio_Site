@@ -5,7 +5,7 @@ import { SubHead } from "@/comps/SubHead"
 import { Text } from "@/comps/Text"
 import { TypeEffect } from "@/comps/TypeEffect"
 import { Colon } from "@/comps/Colon"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 
 const MainCont = styled.main`
@@ -40,6 +40,11 @@ const Hello = styled.div`
   font-size: 72px;
   font-family: 'Gothic';
   margin-bottom: -40px;
+  @media only screen and (max-width: 700px) {
+    font-size: 16px;
+    margin-bottom: -10px;
+
+  }
 `
 
 const Name = styled.h1`
@@ -49,7 +54,9 @@ const Name = styled.h1`
   margin-top: 0px;
   font-weight: normal;
   @media only screen and (max-width: 700px) {
-    font-size: 70px;
+    font-size: 41px;
+    margin-bottom: -10px;
+
   }
 `
 
@@ -63,12 +70,20 @@ const Emoticon = styled.div`
   font-size: 70px;
   font-family: Arial, Helvetica, sans-serif;
   padding-right: 50px;
+  @media only screen and (max-width: 700px) {
+    font-size: 12px;
+    padding-right: 5px;
+
+  }
 `
 
 const SubText = styled.p`
   font-size: 32px;
   font-family: 'Source';
   color: #8C8C8C;
+  @media only screen and (max-width: 700px) {
+    font-size: 8px;
+  }
 `
 
 const SkillsCont = styled.div`

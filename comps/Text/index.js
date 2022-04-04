@@ -6,6 +6,9 @@ const Style = styled.p`
     font-family: 'Source';
     font-size: 20px;
     color: #8C8C8C;
+    @media only screen and (max-width: 700px) {
+        font-size: 10px;
+    }
 `
 
 export const Text = ({

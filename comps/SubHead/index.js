@@ -9,6 +9,9 @@ const Style = styled.h4`
     margin-top: 50px;
     color: #8C8C8C;
     margin-bottom:0px ;
+    @media only screen and (max-width: 700px) {
+        font-size: 16px;
+    }
 `
 
 export const SubHead = ({

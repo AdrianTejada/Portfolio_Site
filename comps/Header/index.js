@@ -7,6 +7,9 @@ const Style = styled.h3`
     font-size: 72px;
     font-weight: normal;
     margin-top: 0px;
+    @media only screen and (max-width: 700px) {
+        font-size: 20px;
+    }
 `
 
 export const Header = ({

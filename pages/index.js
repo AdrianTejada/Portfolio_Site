@@ -34,6 +34,9 @@ const TextCont = styled.div`
   -webkit-user-select: none;
   -ms-user-select: none;
   margin-top: 150px;
+  @media only screen and (max-width: 700px) {
+    margin-top: 50px;
+  }
 `
 
 const Hello = styled.div`
@@ -41,9 +44,8 @@ const Hello = styled.div`
   font-family: 'Gothic';
   margin-bottom: -40px;
   @media only screen and (max-width: 700px) {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: -10px;
-
   }
 `
 
@@ -55,7 +57,7 @@ const Name = styled.h1`
   font-weight: normal;
   @media only screen and (max-width: 700px) {
     font-size: 41px;
-    margin-bottom: -10px;
+    margin-bottom: -12px;
 
   }
 `
@@ -82,7 +84,7 @@ const SubText = styled.p`
   font-family: 'Source';
   color: #8C8C8C;
   @media only screen and (max-width: 700px) {
-    font-size: 8px;
+    font-size: 9px;
   }
 `
 

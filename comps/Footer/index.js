@@ -10,6 +10,9 @@ const MainCont = styled.footer`
     align-items: center;
     background-color: black;
     bottom: 0px;
+    @media only screen and (max-width: 700px) {
+        margin-top: 200px;
+    }
 `
 
 const Title = styled.h4`

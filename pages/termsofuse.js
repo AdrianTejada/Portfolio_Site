@@ -79,12 +79,12 @@ export default function TermsOfUse() {
                     text="If you disagree with any of the above terms of use or any part of the User Agreement, do not use this Web site."
                 />
 
-                <SubHead
-                    text="Last Update: April 2022"
+                <Text
+                    text="Adrian Tejada"
                 />
 
-                <SubHead
-                    text="Adrian Tejada"
+                <Text
+                    text="Last Update: April 2022"
                 />
 
 

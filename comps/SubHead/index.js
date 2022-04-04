@@ -11,6 +11,7 @@ const Style = styled.h4`
     margin-bottom:0px ;
     @media only screen and (max-width: 700px) {
         font-size: 16px;
+        margin-top: 20px;
     }
 `
 

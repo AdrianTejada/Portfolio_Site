@@ -6,6 +6,7 @@ import { Text } from "@/comps/Text"
 import { TypeEffect } from "@/comps/TypeEffect"
 import { Colon } from "@/comps/Colon"
 import { useState } from "react"
+import { Footer } from "@/comps/Footer"
 
 
 const MainCont = styled.main`
@@ -100,6 +101,10 @@ const Line = styled.div`
   height: 6px;
   background-color: black;
   border-radius: 2px;
+  @media only screen and (max-width: 700px) {
+    margin-top: 50px;
+    height: 2px;
+  }
 `
 
 const BigCont = styled.div`
@@ -176,7 +181,8 @@ export default function Home() {
         </BigCont>
 
       </ScaleDiv>
-      
+
+      <Footer/>
   </MainCont>
 }
  

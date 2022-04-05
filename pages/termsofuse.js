@@ -5,8 +5,6 @@ import { Text } from "@/comps/Text"
 import { Colon } from "@/comps/Colon"
 import { useState } from "react"
 import { Footer } from "@/comps/Footer"
-import { SubHead } from "@/comps/SubHead"
-
 
 const MainCont = styled.main`
   width: 100vw;

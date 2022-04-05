@@ -62,6 +62,11 @@ const MenuItems = styled.div`
     -webkit-user-select: none;
     -ms-user-select: none;
     transition: background-color .3s, color .3s;
+    @media only screen and (max-width: 700px) {
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 15px;
+    }
 `
 
 export const Menu =  ({

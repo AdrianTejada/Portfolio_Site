@@ -68,11 +68,11 @@ export default function Motion() {
                 />
                 <ProjectsCont>
                   <ProjectCont
-                    bg={"#f3ac81"}
-                    txtcolor={"white"}
-                    txt={"SaveThePlate"}
+                    bg={"white"}
+                    txtcolor={"black"}
+                    txt={"Lytchi X Cosette"}
                     img={stpLogo}
-                    alt={"The SaveThePlate Logo"}
+                    alt={"Lytchi x Cosette Logo"}
                     logowidth={"109px"}
                     logoheight={"119px"}
                     path={"/dev/savetheplate"}
@@ -81,9 +81,9 @@ export default function Motion() {
                 <ProjectCont
                     bg={"#f3ac81"}
                     txtcolor={"white"}
-                    txt={"SaveThePlate"}
+                    txt={"Have you Seen This Girl?"}
                     img={stpLogo}
-                    alt={"The SaveThePlate Logo"}
+                    alt={"Have you Seen This Girl?"}
                     logowidth={"109px"}
                     logoheight={"119px"}
                     path={"/dev/savetheplate"}

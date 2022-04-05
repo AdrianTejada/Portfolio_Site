@@ -4,14 +4,15 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 const MainCont = styled.div`
-    min-width: 240px;
-    min-height: 240px;
+    width: 240px;
+    height: 240px;
     border-radius: 45px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background-color: ${props=>props.bg};
     margin: 10px;
+    border: 2px solid #8c8c8c;
 `
 
 const ContentCont = styled.div`
@@ -33,6 +34,8 @@ const ProjectText = styled.div`
     -moz-user-select:none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    padding: 10px;
+    align-self: center;
 `
 
 export const ProjectCont = ({

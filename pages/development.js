@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { Menu } from "@/comps/Menu"
 import { Header } from "@/comps/Header"
-import { SubHead } from "@/comps/SubHead"
-import { Text } from "@/comps/Text"
 import { Colon } from "@/comps/Colon"
 import { useState } from "react"
-
+import { Footer } from "@/comps/Footer"
+import { ProjectCont } from "@/comps/ProjectCont"
+import stpLogo from '@/public/stp/stp_logo.png'
 
 const MainCont = styled.main`
   width: 100vw;
@@ -21,6 +21,7 @@ const ScaleDiv = styled.div`
   transition-property: transform;
   transition: transform .6s;
   z-index: ${props=>props.z};
+  height: 100vh;
 `
 
 const ColonCont = styled.div`
@@ -36,8 +37,13 @@ const ContentCont = styled.div`
     align-items: flex-start;
 `
 
+const ProjectsCont = styled.div`
+  width: 100%;
+  display: flex;
+`
 
-export default function REPLACE_THIS() { 
+
+export default function Development() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
 
@@ -58,11 +64,23 @@ export default function REPLACE_THIS() {
             <Colon/>
             <ContentCont>
                 <Header
-                    text="REPLACE_THIS"
+                    text="Development"
                 />
-
+                <ProjectsCont>
+                  <ProjectCont
+                    bg={"#f3ac81"}
+                    txtcolor={"white"}
+                    txt={"SaveThePlate"}
+                    img={stpLogo}
+                    alt={"The SaveThePlate Logo"}
+                    logowidth={"109px"}
+                    logoheight={"119px"}
+                    path={"/dev/savetheplate"}
+                  />
+                </ProjectsCont>
             </ContentCont>
         </ColonCont>
       </ScaleDiv>
+      <Footer/>
   </MainCont>
 }

@@ -38,12 +38,12 @@ const ContentCont = styled.div`
 `
 
 
-export default function REPLACE_THIS() { 
+export default function SaveThePlate() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
 
   return <MainCont>
-      <Menu currentRoute="REPLACE_THIS" OnOpen={(e)=>{
+      <Menu OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {
           setTimeout(()=>{
@@ -59,7 +59,7 @@ export default function REPLACE_THIS() {
             <Colon/>
             <ContentCont>
                 <Header
-                    text="REPLACE_THIS"
+                    text="SaveThePlate"
                 />
 
             </ContentCont>
@@ -67,4 +67,3 @@ export default function REPLACE_THIS() {
       </ScaleDiv>
   </MainCont>
 }
- 

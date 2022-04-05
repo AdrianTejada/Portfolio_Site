@@ -98,7 +98,7 @@ export default function AboutMe() {
                             text="After highschool I originally wanted to pursue a career in videography, photography, and motion graphic design. Then I heard of the Digital Design and Development program at BCIT, and applied with the intention to get better at motion graphic design and learn UI/UX Design. Eventually I found myself having more fun with front-end development and decided to pursue it as my current career. I hope to grow and learn plenty of things on this journey and am currently aspiring to become either a Full Stack Developer or Front End Engineer!"
                         />
                         <Text
-                            text="Outside of my professional life, you can find me hiking, bouldering, hanging out with my dog Max."
+                            text="Outside of my professional life, you can find me hiking, bouldering, or hanging out with my dog Max."
                         />
                     </TextCont>
                     

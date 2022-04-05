@@ -69,12 +69,12 @@ const ImageCont = styled.div`
 `
 
 
-export default function TermsOfUse() { 
+export default function AboutMe() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
 
   return <MainCont>
-      <Menu  OnOpen={(e)=>{
+      <Menu currentRoute="about" OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {
           setTimeout(()=>{
@@ -90,7 +90,7 @@ export default function TermsOfUse() {
             <Colon/>
             <ContentCont>
                 <Header
-                    text="Terms of Use"
+                    text="About Me"
                 />
                 <AboutCont>
                     <TextCont>

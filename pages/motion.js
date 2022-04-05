@@ -77,7 +77,7 @@ export default function Motion() {
                     alt={"Lytchi x Cosette Logo"}
                     logowidth={"109px"}
                     logoheight={"119px"}
-                    path={"/dev/savetheplate"}
+                    path={"/motion/lytchixcosette"}
                   />
                 <ProjectCont
                     bg={"#fcf1c7"}

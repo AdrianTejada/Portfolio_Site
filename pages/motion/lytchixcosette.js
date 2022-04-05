@@ -36,12 +36,21 @@ const ContentCont = styled.div`
     width: 100%;
 `
 
+const ResponsiveCont = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    @media only screen and (max-width: 700px) {
+        flex-direction: column;
+    }
+`
+
 const WorkCont = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 `
 
 const VideoCont = styled.div`
@@ -57,7 +66,7 @@ const VideoCont = styled.div`
 `
 
 
-export default function HaveYouSeenThisGirl() { 
+export default function LytchiXCosette() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
 
@@ -78,20 +87,18 @@ export default function HaveYouSeenThisGirl() {
             <Colon/>
             <ContentCont>
                 <Header
-                    text="Have You Seen This Girl?"
+                    text="Lytchi X Cosette"
                 />
                 <WorkCont>
                     <Text
-                        text="Motion Graphic and Album art done for artist Mikihella."
-                    />
-                    <div onClick={()=>window.open("https://open.spotify.com/album/6wgJ0d2OkltkBRYuSceKh0?si=0TVxwssoTHyVNignQb_uzg")}>
-                        <Text
-                            text="Click here to open on Spotify"
-                        />
-                    </div>
+                        text="Promotion and Visuals done for the Lytchi & Cosette collaboration."
+                    />    
+                </WorkCont>
+                <ResponsiveCont>
+                <WorkCont>
                     <VideoCont>
                         <ReactPlayer
-                            url={"https://youtu.be/mEyO6Cuql-Q"}
+                            url={"https://youtu.be/NMoWF4O9xPc"}
                             playing="true"
                             loop="true"
                             width="100%"
@@ -100,6 +107,20 @@ export default function HaveYouSeenThisGirl() {
                         />
                     </VideoCont>
                 </WorkCont>
+                <WorkCont>
+                    <VideoCont>
+                        <ReactPlayer
+                            url={"https://youtu.be/gghDQHDeXNw"}
+                            playing="true"
+                            loop="true"
+                            width="100%"
+                            height="100%"
+                            controls="false"
+                        />
+                    </VideoCont>
+                </WorkCont>
+
+                </ResponsiveCont>
             </ContentCont>
         </ColonCont>
       </ScaleDiv>

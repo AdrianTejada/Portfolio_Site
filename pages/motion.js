@@ -6,6 +6,8 @@ import { useState } from "react"
 import { Footer } from "@/comps/Footer"
 import { ProjectCont } from "@/comps/ProjectCont"
 import stpLogo from '@/public/stp/stp_logo.png'
+import hustg from '@/public/hustg/hustg.png'
+import ktoflogo from '@/public/hustg/logo.png'
 
 const MainCont = styled.main`
   width: 100vw;
@@ -77,16 +79,15 @@ export default function Motion() {
                     logoheight={"119px"}
                     path={"/dev/savetheplate"}
                   />
-
                 <ProjectCont
-                    bg={"#f3ac81"}
-                    txtcolor={"white"}
+                    bg={"#fcf1c7"}
+                    txtcolor={"#2f493a"}
                     txt={"Have you Seen This Girl?"}
-                    img={stpLogo}
+                    img={ktoflogo}
                     alt={"Have you Seen This Girl?"}
-                    logowidth={"109px"}
-                    logoheight={"119px"}
-                    path={"/dev/savetheplate"}
+                    logowidth={"120px"}
+                    logoheight={"120px"}
+                    path={"/motion/haveyouseenthisgirl"}
                   />
                 </ProjectsCont>
             </ContentCont>

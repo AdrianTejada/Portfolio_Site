@@ -19,6 +19,7 @@ const MainCont = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: -100vh;
+  /* object-fit: cover; */
 `
 
 const ScaleDiv = styled.div`

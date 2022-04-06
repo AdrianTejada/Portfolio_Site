@@ -58,6 +58,7 @@ const Row = styled.div`
         flex-direction: column;
         align-items: center;
     }
+  margin-top: 20px;
 `
 
 const ScreenCont = styled.div`
@@ -113,7 +114,7 @@ export default function SaveThePlate() {
                 <ImagesCont>
                   <Row>
                     <ScreenCont>
-                      <Text
+                      <SubHead
                         text="Login"
                       />
                       <Image
@@ -124,7 +125,7 @@ export default function SaveThePlate() {
                       />
                     </ScreenCont>
                     <ScreenCont>
-                      <Text
+                      <SubHead
                         text="Ordered Items"
                       />
                       <Image
@@ -137,7 +138,7 @@ export default function SaveThePlate() {
                   </Row>
                   <Row>
                     <ScreenCont>
-                      <Text
+                      <SubHead
                         text="Listed Items"
                       />
                       <Image
@@ -148,7 +149,7 @@ export default function SaveThePlate() {
                       />
                     </ScreenCont>
                     <ScreenCont>
-                      <Text
+                      <SubHead
                         text="Add New Menu Item"
                       />
                       <Image

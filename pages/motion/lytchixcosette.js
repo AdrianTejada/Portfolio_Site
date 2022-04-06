@@ -97,7 +97,7 @@ export default function LytchiXCosette() {
                 />
                 <WorkCont>
                     <Text
-                        text="Promotion and Visuals done for the Lytchi & Cosette collaboration."
+                        text="Promotion and Visuals done for the Lytchi & Cosette collaboration. Built with After Effects and Blender."
                     />    
                 </WorkCont>
                 <ResponsiveCont>

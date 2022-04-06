@@ -68,6 +68,10 @@ const Legal = styled.div`
         font-size: 8px;
     }
     padding: 10px;
+    :hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 `
 
 const Div = styled.div`
@@ -76,13 +80,17 @@ const Div = styled.div`
     height: 10px;
 
 `
+const Emoticon = styled.span`
+    font-family: Arial, Helvetica, sans-serif;
+    color: 'white';
+`
 
 export const Footer = () => {
     const router = useRouter()
 
  return  <MainCont>
      <Title>
-     Let’s get in touch!
+     Let’s get in touch! <Emoticon>(~‾ω‾)~</Emoticon>
      </Title>
      <LinkCont>
         <Link href="mailto:tejrian@gmail.com" >Email</Link>

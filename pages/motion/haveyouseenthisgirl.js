@@ -88,7 +88,7 @@ export default function HaveYouSeenThisGirl() {
                 />
                 <WorkCont>
                     <Text
-                        text="Motion Graphic and Album art done for artist Mikihella."
+                        text="Motion Graphic and Album art done for artist Mikihella. Built with After Effects and Blender."
                     />
                     <div onClick={()=>window.open("https://open.spotify.com/album/6wgJ0d2OkltkBRYuSceKh0?si=0TVxwssoTHyVNignQb_uzg")}>
                         <Text

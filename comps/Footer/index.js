@@ -85,7 +85,7 @@ export const Footer = () => {
      Let’s get in touch!
      </Title>
      <LinkCont>
-        <Link>Email</Link>
+        <Link href="mailto:tejrian@gmail.com" >Email</Link>
         <Link onClick={()=>window.open('https://github.com/AdrianTejada')}>Github</Link>
         <Link onClick={()=>windpw.open('https://www.linkedin.com/in/atej/?originalSubdomain=ca')}>LinkedIn</Link>
      </LinkCont>

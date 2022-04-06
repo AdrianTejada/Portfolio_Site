@@ -7,7 +7,7 @@ import { TypeEffect } from "@/comps/TypeEffect"
 import { Colon } from "@/comps/Colon"
 import { useState } from "react"
 import { Footer } from "@/comps/Footer"
-
+import Head from "next/head"
 
 const MainCont = styled.main`
   width: 100vw;
@@ -120,6 +120,11 @@ export default function Home() {
   const [z, setZ] = useState(1)
 
   return <MainCont>
+    <Head>
+      <title>Adrian Tejada - Home</title>
+      <link rel="icon" href="AT.png"/>
+      <meta name="description" content="The home page of Adrian Tejada&#x27;s portfolio site"/>
+    </Head>
       <Menu currentRoute="index" OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {

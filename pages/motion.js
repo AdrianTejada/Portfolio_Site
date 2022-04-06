@@ -8,6 +8,8 @@ import { ProjectCont } from "@/comps/ProjectCont"
 import stpLogo from '@/public/stp/stp_logo.png'
 import hustg from '@/public/hustg/hustg.png'
 import ktoflogo from '@/public/hustg/logo.png'
+import Head from "next/head"
+
 
 const MainCont = styled.main`
   width: 100vw;
@@ -50,6 +52,11 @@ export default function Motion() {
   const [z, setZ] = useState(1)
 
   return <MainCont>
+        <Head>
+      <title>Adrian Tejada - Development</title>
+      <link rel="icon" href="AT.png"/>
+      <meta name="description" content="Motion graphics designed by Adrian Tejada"/>
+    </Head>
       <Menu currentRoute="motion" OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {

@@ -7,6 +7,7 @@ import { useState } from "react"
 import { Footer } from "@/comps/Footer"
 import Image from "next/image"
 import src from '@/public/moi/IMG-0429.jpg'
+import Head from "next/dist/shared/lib/head"
 
 const MainCont = styled.main`
   width: 100vw;
@@ -74,6 +75,11 @@ export default function AboutMe() {
   const [z, setZ] = useState(1)
 
   return <MainCont>
+    <Head>
+      <title>Adrian Tejada - About</title>
+      <link rel="icon" href="AT.png"/>
+      <meta name="description" content="About Adrian Tejada"/>
+    </Head>
       <Menu currentRoute="about" OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {

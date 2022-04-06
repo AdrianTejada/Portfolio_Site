@@ -1,7 +1,6 @@
 LAST TINGS
-	- Mailto
-	- Head tags
 	- domain name
+	
 	- Typeit
 	- Reveal Animations
 	- Loading Animation

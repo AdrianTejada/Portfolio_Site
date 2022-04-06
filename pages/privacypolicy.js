@@ -6,6 +6,8 @@ import { Colon } from "@/comps/Colon"
 import { useState } from "react"
 import { Footer } from "@/comps/Footer"
 import { SubHead } from "@/comps/SubHead"
+import Head from "next/head"
+
 
 const MainCont = styled.main`
   width: 100vw;
@@ -53,6 +55,11 @@ export default function PrivacyPolicy() {
   const [z, setZ] = useState(1)
 
   return <MainCont>
+    <Head>
+      <title>Adrian Tejada - Privacy Policy</title>
+      <link rel="icon" href="AT.png"/>
+      <meta name="description" content="Adrian Tejada&#x27;s privacy policy"/>
+    </Head>
       <Menu  OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {

@@ -11,6 +11,7 @@ import listed from '@/public/stp/listed.PNG'
 import login from '@/public/stp/login.PNG'
 import new_item from '@/public/stp/new_item.PNG'
 import orders from '@/public/stp/orders.PNG'
+import Head from 'next/head'
 
 const MainCont = styled.main`
   width: 100vw;
@@ -76,6 +77,11 @@ export default function SaveThePlate() {
   const [z, setZ] = useState(1)
 
   return <MainCont>
+    <Head>
+      <title>Adrian Tejada - SaveThePlate</title>
+      <link rel="icon" href="../AT.png"/>
+      <meta name="description" content="Work on SaveThePlate"/>
+    </Head>
       <Menu OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {

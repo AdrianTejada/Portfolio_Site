@@ -6,6 +6,7 @@ import { Colon } from "@/comps/Colon"
 import { useState } from "react"
 import { Footer } from "@/comps/Footer"
 import ReactPlayer from "react-player"
+import Head from 'next/head'
 
 const MainCont = styled.main`
   width: 100vw;
@@ -62,6 +63,11 @@ export default function HaveYouSeenThisGirl() {
   const [z, setZ] = useState(1)
 
   return <MainCont>
+    <Head>
+      <title>Adrian Tejada - Have you Seen This Girl?</title>
+      <link rel="icon" href="../AT.png"/>
+      <meta name="description" content="Work with Artist Mikihella"/>
+    </Head>
       <Menu OnOpen={(e)=>{
         setScale(e)
         if (e === 1) {

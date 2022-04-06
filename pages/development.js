@@ -74,7 +74,7 @@ export default function Development() {
                 />
                 <ProjectsCont>
                   <ProjectCont
-                    bg={"#f3ac81"}
+                    bg={"#E94168"}
                     txtcolor={"white"}
                     txt={"SaveThePlate"}
                     img={stpLogo}

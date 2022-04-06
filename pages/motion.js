@@ -5,10 +5,9 @@ import { Colon } from "@/comps/Colon"
 import { useState } from "react"
 import { Footer } from "@/comps/Footer"
 import { ProjectCont } from "@/comps/ProjectCont"
-import stpLogo from '@/public/stp/stp_logo.png'
-import hustg from '@/public/hustg/hustg.png'
 import ktoflogo from '@/public/hustg/logo.png'
 import Head from "next/head"
+import lytchixcosette from '@/public/lytchixcosette/icon.png'
 
 
 const MainCont = styled.main`
@@ -80,10 +79,10 @@ export default function Motion() {
                     bg={"white"}
                     txtcolor={"black"}
                     txt={"Lytchi X Cosette"}
-                    img={stpLogo}
+                    img={lytchixcosette}
                     alt={"Lytchi x Cosette Logo"}
-                    logowidth={"109px"}
-                    logoheight={"119px"}
+                    logowidth={"150px"}
+                    logoheight={"150px"}
                     path={"/motion/lytchixcosette"}
                   />
                 <ProjectCont

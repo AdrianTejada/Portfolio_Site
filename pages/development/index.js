@@ -81,9 +81,19 @@ export default function Development() {
                     alt={"The SaveThePlate Logo"}
                     logowidth={"109px"}
                     logoheight={"119px"}
-                    path={"/dev/savetheplate"}
+                    path={"/development/savetheplate"}
                   />
-                </ProjectsCont>
+                  <ProjectCont
+                    bg={"white"}
+                    txtcolor={"black"}
+                    txt={"Happyway"}
+                    img={stpLogo}
+                    alt={"The Happyway Logo"}
+                    logowidth={"109px"}
+                    logoheight={"119px"}
+                    path={"/development/happyway"}
+                  />
+                </ProjectsCont>  
             </ContentCont>
         </ColonCont>
       </ScaleDiv>

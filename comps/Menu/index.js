@@ -16,7 +16,11 @@ const IconCont = styled.div`
     width: 50px;
     height: 40px;
     align-self: flex-end;
-
+    @media only screen and (max-width: 700px) {
+        transform: scale(.5);    
+        top: 10px;
+        right: 10px;  
+    }
 `
 
 const Line = styled.div`
@@ -25,7 +29,9 @@ const Line = styled.div`
     background-color: ${props=>props.bg};
     transition: background-color .4s;
     border-radius: 3px;
+    @media only screen and (max-width: 700px) {
 
+    }
 `
 
 const MenuCont = styled.div`

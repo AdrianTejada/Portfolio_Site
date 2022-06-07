@@ -6,7 +6,7 @@ export const TypeEffect = ({
     text="hello",
     speed=1000
 }) => {
-    return <div>
+    return <>
         {erase === false?
             <Baffle
                 speed={100}
@@ -21,5 +21,5 @@ export const TypeEffect = ({
                 {text}
             </TypeIt>
         }
-    </div>
+    </>
 }

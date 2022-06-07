@@ -13,6 +13,9 @@ const MainCont = styled.div`
     background-color: ${props=>props.bg};
     margin: 10px;
     border: 2px solid #8c8c8c;
+    @media only screen and (max-width: 700px) {
+
+    }
 `
 
 const ContentCont = styled.div`

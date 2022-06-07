@@ -1,10 +1,2 @@
 LAST TINGS
-	- domain name
-	- Typeit
-	- Reveal Animations
 	- Loading Animation
-
-
-responsivenes notes:
-
-menu icon

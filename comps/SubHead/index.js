@@ -31,9 +31,12 @@ export const SubHead = ({
                 {text}
             </Baffle>
         :
-            <TypeIt>
-                {text}
-            </TypeIt>
+        <TypeIt 
+        getBeforeInit={(instance)=>{
+            instance.type(text, {instant: true}).delete()
+            return instance
+        }}
+    />
         }
     </Style>
 }

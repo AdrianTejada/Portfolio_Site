@@ -118,6 +118,7 @@ const BigCont = styled.div`
 export default function Home() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
+  const [erase, setErase] = useState(false)
 
   return <MainCont>
     <Head>
@@ -125,38 +126,46 @@ export default function Home() {
       <link rel="icon" href="AT.png"/>
       <meta name="description" content="The home page of Adrian Tejada&#x27;s portfolio site"/>
     </Head>
-      <Menu currentRoute="index" OnOpen={(e)=>{
-        setScale(e)
-        if (e === 1) {
-          setTimeout(()=>{
-            setZ(1)
-          },400)
-        } else {
-          setZ(-2)
+      <Menu
+        currentRoute="index"
+        OnOpen={(e)=>{
+          setScale(e)
+          if (e === 1) {
+            setTimeout(()=>{
+              setZ(1)
+            },400)
+          } else {
+            setZ(-2)
+          }}
         }
-      }}/>
+        Erase={(e)=>setErase(e)}
+      />
 
       <ScaleDiv scale={scale===1?1:.98} z={z}>
         <TextCont>
           <Hello>
             <TypeEffect
               text="Hi, my name&#x27;s"
+              erase={erase}
             />
             </Hello>
           <Name>
             <TypeEffect
               text="ADRIAN TEJADA"
+              erase={erase}
             />
           </Name>
           <SubCont>
             <Emoticon>
               <TypeEffect
                 text="(&nbsp;&nbsp;&nbsp;-&nbsp;ω&nbsp;-&nbsp;)ﾉ"
+                erase={erase}
               />
             </Emoticon>
             <SubText>
               <TypeEffect
                 text="Front-End Developer & Motion Graphics Designer"
+                erase={erase}
               />
             </SubText>
           </SubCont>
@@ -169,22 +178,26 @@ export default function Home() {
         <SkillsCont>
             <Header
               text="My Skill Set"
+              erase={erase}
             />
             <SubHead
               text="Front End Development"
+              erase={erase}
             />
             <Text
               text="Thanks to my 2 years spent at the Digital Design and Development at BCIT, I have experience building web-applications in team environments using React.js, JavaScript, HTML, and CSS. My favorite parts of Front End Development are mapping out data from API’s on to the front-end, and coding out UI/UX interactions and animations."
+              erase={erase}
             />
             <SubHead
               text="Motion Graphics"
+              erase={erase}
             />
             <Text
               text="Mostly self taught, I’ve always loved any form of animation and motion graphics. Originally doing this for fun for friends and family, I eventully started doing work for small businesses and local artists."
+              erase={erase}
             />
         </SkillsCont>
         </BigCont>
-
       </ScaleDiv>
 
       <Footer/>

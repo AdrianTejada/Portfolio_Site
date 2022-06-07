@@ -17,9 +17,12 @@ export const TypeEffect = ({
                 {text}
             </Baffle>
         :
-            <TypeIt>
-                {text}
-            </TypeIt>
+            <TypeIt 
+                getBeforeInit={(instance)=>{
+                    instance.type(text, {instant: true}).delete()
+                    return instance
+                }}
+            />
         }
     </>
 }

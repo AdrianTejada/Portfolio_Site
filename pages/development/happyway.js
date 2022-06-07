@@ -44,32 +44,6 @@ const ContentCont = styled.div`
     width: 100%;
 `
 
-const ImagesCont = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  @media only screen and (max-width: 700px) {
-        flex-direction: column;
-        align-items: center;
-    }
-  margin-top: 20px;
-`
-
-const ScreenCont = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 348px;
-  height: 800px;
-`
-
 const imgwidth = 348;
 const imgheight = 700;
 
@@ -107,60 +81,11 @@ export default function Happyway() {
                 <Text
                   text="A web application I helped develop during my Internship at BCIT. Development version available upon request."
                 />
-                <Text
-                  text="Click here to go to the project"
+                <Text style={{color: 'red'}}
+                  text="Link to project"
                 />
 
-                <ImagesCont>
-                  <Row>
-                    <ScreenCont>
-                      <SubHead
-                        text="Login"
-                      />
-                      <Image
-                        src={login}
-                        alt={"A screenshot of the login screen"}
-                        width={imgwidth}
-                        height={imgheight}
-                      />
-                    </ScreenCont>
-                    <ScreenCont>
-                      <SubHead
-                        text="Ordered Items"
-                      />
-                      <Image
-                        src={orders}
-                        alt={"A screenshot of the orders tab"}
-                        width={imgwidth}
-                        height={imgheight}
-                      />
-                    </ScreenCont>
-                  </Row>
-                  <Row>
-                    <ScreenCont>
-                      <SubHead
-                        text="Listed Items"
-                      />
-                      <Image
-                        src={listed}
-                        alt={"A screenshot of the listed tab"}
-                        width={imgwidth}
-                        height={imgheight}
-                      />
-                    </ScreenCont>
-                    <ScreenCont>
-                      <SubHead
-                        text="Add New Menu Item"
-                      />
-                      <Image
-                        src={new_item}
-                        alt={"A screenshot of the add new item model"}
-                        width={imgwidth}
-                        height={imgheight}
-                      />
-                    </ScreenCont>
-                  </Row>
-                </ImagesCont>
+            
             </ContentCont>
         </ColonCont>
       </ScaleDiv>

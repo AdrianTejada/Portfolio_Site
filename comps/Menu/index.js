@@ -78,13 +78,13 @@ const MenuItems = styled.div`
 export const Menu =  ({
     currentRoute="",
     OnOpen=()=>{},
-    Erase=()=>{}
+    Fade=()=>{}
 }) => {
     const [op, setOp] = useState(-1)
     const [transition, isTransitioning] = useState(false)
 
-    
     const router = useRouter()
+
 
 
     return <>
@@ -109,7 +109,7 @@ export const Menu =  ({
                     isTransitioning(true)
                     setOp(-1)
                     OnOpen(op)
-                    setTimeout(()=>{isTransitioning(false)},1000)
+                    setTimeout(()=>{isTransitioning(false)},600)
                 }
 
                 }}> 
@@ -117,9 +117,8 @@ export const Menu =  ({
                     if (transition=== false) {
                         setOp(-1)
                         if (currentRoute != "index") {
-                            console.log(false)
-                            Erase(true)
-                            setTimeout(()=>{router.push('/')},1000)
+                            Fade(true)
+                            setTimeout(()=>{router.push('/')},600)
                         }
                         OnOpen(op)
                     }
@@ -129,8 +128,8 @@ export const Menu =  ({
                     if (transition === false) {
                         setOp(-1)
                         if (currentRoute != "development") {
-                            Erase(true)
-                            setTimeout(()=>{router.push('/development')},1000)
+                            Fade(true)
+                            setTimeout(()=>{router.push('/development')},600)
                         }
                         OnOpen(op)
                     }
@@ -140,8 +139,8 @@ export const Menu =  ({
                     if (transition === false) {
                         setOp(-1)
                         if (currentRoute != "motion") {
-                            Erase(true)
-                            setTimeout(()=>{router.push('/motion')},1000)
+                            Fade(true)
+                            setTimeout(()=>{router.push('/motion')},600)
                         }
                         OnOpen(op)
                     }
@@ -151,8 +150,8 @@ export const Menu =  ({
                     if (transition === false) {
                         setOp(-1)
                         if (currentRoute != "about") {
-                            Erase(true)
-                            setTimeout(()=>{router.push('/about')},1000)
+                            Fade(true)
+                            setTimeout(()=>{router.push('/about')},600)
                         }
                         OnOpen(op)
                     }

@@ -5,7 +5,7 @@ import { SubHead } from "@/comps/SubHead"
 import { Text } from "@/comps/Text"
 import { TypeEffect } from "@/comps/TypeEffect"
 import { Colon } from "@/comps/Colon"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Footer } from "@/comps/Footer"
 import Head from "next/head"
 
@@ -16,6 +16,8 @@ const MainCont = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: -100vh;
+  opacity: ${props=>props.op};
+  transition: opacity .6s;
 `
 
 const ScaleDiv = styled.div`
@@ -118,9 +120,13 @@ const BigCont = styled.div`
 export default function Home() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
-  const [erase, setErase] = useState(false)
+  const [fade, setFade] = useState(true)
 
-  return <MainCont>
+  useEffect(()=>{
+    setFade(false)
+  },[])
+
+  return <MainCont op={fade == false ? 1 : 0}>
     <Head>
       <title>Adrian Tejada - Home</title>
       <link rel="icon" href="AT.png"/>
@@ -138,7 +144,7 @@ export default function Home() {
             setZ(-2)
           }}
         }
-        Erase={(e)=>setErase(e)}
+        Fade={(e)=>setFade(e)}
       />
 
       <ScaleDiv scale={scale===1?1:.98} z={z}>
@@ -146,26 +152,22 @@ export default function Home() {
           <Hello>
             <TypeEffect
               text="Hi, my name&#x27;s"
-              erase={erase}
             />
             </Hello>
           <Name>
             <TypeEffect
               text="ADRIAN TEJADA"
-              erase={erase}
             />
           </Name>
           <SubCont>
             <Emoticon>
               <TypeEffect
                 text="(&nbsp;&nbsp;&nbsp;-&nbsp;ω&nbsp;-&nbsp;)ﾉ"
-                erase={erase}
               />
             </Emoticon>
             <SubText>
               <TypeEffect
                 text="Front-End Developer & Motion Graphics Designer"
-                erase={erase}
               />
             </SubText>
           </SubCont>
@@ -178,23 +180,18 @@ export default function Home() {
         <SkillsCont>
             <Header
               text="My Skill Set"
-              erase={erase}
             />
             <SubHead
               text="Front End Development"
-              erase={erase}
             />
             <Text
               text="Thanks to my 2 years spent at the Digital Design and Development at BCIT, I have experience building web-applications in team environments using React.js, JavaScript, HTML, and CSS. My favorite parts of Front End Development are mapping out data from API’s on to the front-end, and coding out UI/UX interactions and animations."
-              erase={erase}
             />
             <SubHead
               text="Motion Graphics"
-              erase={erase}
             />
             <Text
               text="Mostly self taught, I’ve always loved any form of animation and motion graphics. Originally doing this for fun for friends and family, I eventully started doing work for small businesses and local artists."
-              erase={erase}
             />
         </SkillsCont>
         </BigCont>

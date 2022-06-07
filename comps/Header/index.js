@@ -1,5 +1,4 @@
 import Baffle from 'baffle-react'
-import TypeIt from 'typeit-react'
 import styled from 'styled-components'
 
 const Style = styled.h3`
@@ -13,12 +12,10 @@ const Style = styled.h3`
 `
 
 export const Header = ({
-    erase=false,
     text="hello",
     speed=1000
 }) => {
     return <Style>
-        {erase === false?
             <Baffle
                 speed={100}
                 obfuscate={false}
@@ -27,13 +24,5 @@ export const Header = ({
             >
                 {text}
             </Baffle>
-        :
-        <TypeIt 
-        getBeforeInit={(instance)=>{
-            instance.type(text, {instant: true}).delete()
-            return instance
-        }}
-    />
-        }
     </Style>
 }

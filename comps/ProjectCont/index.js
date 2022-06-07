@@ -75,12 +75,21 @@ export const ProjectCont = ({
     img=null,
     alt=null,
     logowidth=null,
-    logoheight=null
+    logoheight=null,
+    Fade=()=>{},
 }) => {
     const [op, setOp] = useState(0)
     const router = useRouter()
 
-    return <MainCont onMouseOver={()=>setOp(1)} onMouseOut={()=>setOp(0)} onClick={()=>router.push(path)} bg={bg}>
+    return <MainCont
+                onMouseOver={()=>setOp(1)} 
+                onMouseOut={()=>setOp(0)} 
+                onClick={()=>setTimeout(()=>{
+                    Fade(true)
+                    router.push(path)
+                },600) } 
+                bg={bg}
+            >
         <ContentCont bg={bg} op={op===1?0:1}>
             <Image
                 src={img}

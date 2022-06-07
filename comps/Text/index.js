@@ -1,5 +1,4 @@
 import Baffle from 'baffle-react'
-import TypeIt from 'typeit-react'
 import styled from 'styled-components'
 
 const Style = styled.p`
@@ -12,12 +11,10 @@ const Style = styled.p`
 `
 
 export const Text = ({
-    erase=false,
     text="hello",
     speed=1000
 }) => {
     return <Style>
-        {erase === false?
             <Baffle
                 speed={100}
                 obfuscate={false}
@@ -26,13 +23,5 @@ export const Text = ({
             >
                 {text}
             </Baffle>
-        :
-        <TypeIt 
-        getBeforeInit={(instance)=>{
-            instance.type(text, {instant: true}).delete()
-            return instance
-        }}
-    />
-        }
     </Style>
 }

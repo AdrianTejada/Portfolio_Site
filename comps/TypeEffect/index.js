@@ -1,13 +1,10 @@
 import Baffle from 'baffle-react'
-import TypeIt from 'typeit-react'
 
 export const TypeEffect = ({
-    erase=false,
     text="hello",
     speed=1000
 }) => {
     return <>
-        {erase === false?
             <Baffle
                 speed={100}
                 obfuscate={false}
@@ -16,13 +13,5 @@ export const TypeEffect = ({
             >
                 {text}
             </Baffle>
-        :
-            <TypeIt 
-                getBeforeInit={(instance)=>{
-                    instance.type(text, {instant: true}).delete()
-                    return instance
-                }}
-            />
-        }
     </>
 }

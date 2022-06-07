@@ -3,7 +3,7 @@ import { Menu } from "@/comps/Menu"
 import { Header } from "@/comps/Header"
 import { Text } from "@/comps/Text"
 import { Colon } from "@/comps/Colon"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Footer } from "@/comps/Footer"
 import ReactPlayer from "react-player"
 import Head from 'next/head'
@@ -15,6 +15,8 @@ const MainCont = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: -100vh;
+  opacity: ${props=>props.op};
+  transition: opacity .6s;
 `
 
 const ScaleDiv = styled.div`
@@ -61,8 +63,13 @@ const VideoCont = styled.div`
 export default function HaveYouSeenThisGirl() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
+  const [fade, setFade] = useState(true)
 
-  return <MainCont>
+  useEffect(()=>{
+    setFade(false)
+  },[])
+
+  return <MainCont op={fade == false ? 1 : 0}>
     <Head>
       <title>Adrian Tejada - Have you Seen This Girl?</title>
       <link rel="icon" href="../AT.png"/>
@@ -77,7 +84,9 @@ export default function HaveYouSeenThisGirl() {
         } else {
           setZ(-2)
         }
-      }}/>
+      }}
+      Fade={(e)=>setFade(e)}
+      />
 
       <ScaleDiv scale={scale===1?1:.98} z={z}>
         <ColonCont>

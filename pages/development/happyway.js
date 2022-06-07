@@ -4,13 +4,8 @@ import { Header } from "@/comps/Header"
 import { SubHead } from "@/comps/SubHead"
 import { Text } from "@/comps/Text"
 import { Colon } from "@/comps/Colon"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Footer } from "@/comps/Footer"
-import Image from 'next/image'
-import listed from '@/public/stp/listed.PNG'
-import login from '@/public/stp/login.PNG'
-import new_item from '@/public/stp/new_item.PNG'
-import orders from '@/public/stp/orders.PNG'
 import Head from 'next/head'
 
 const MainCont = styled.main`
@@ -20,7 +15,8 @@ const MainCont = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: -100vh;
-  /* object-fit: cover; */
+  opacity: ${props=>props.op};
+  transition: opacity .6s;
 `
 
 const ScaleDiv = styled.div`
@@ -44,14 +40,16 @@ const ContentCont = styled.div`
     width: 100%;
 `
 
-const imgwidth = 348;
-const imgheight = 700;
-
 export default function Happyway() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
+  const [fade, setFade] = useState(true)
 
-  return <MainCont>
+  useEffect(()=>{
+    setFade(false)
+  },[])
+
+  return <MainCont op={fade == false ? 1 : 0}>
     <Head>
       <title>Adrian Tejada - Happyway</title>
       <link rel="icon" href="../AT.png"/>
@@ -66,7 +64,9 @@ export default function Happyway() {
         } else {
           setZ(-2)
         }
-      }}/>
+      }}
+      Fade={(e)=>setFade(e)}
+      />
 
       <ScaleDiv scale={scale===1?1:.98} z={z}>
         <ColonCont>

@@ -76,7 +76,6 @@ export const ProjectCont = ({
     alt=null,
     logowidth=null,
     logoheight=null,
-    Fade=()=>{},
 }) => {
     const [op, setOp] = useState(0)
     const router = useRouter()
@@ -84,10 +83,7 @@ export const ProjectCont = ({
     return <MainCont
                 onMouseOver={()=>setOp(1)} 
                 onMouseOut={()=>setOp(0)} 
-                onClick={()=>setTimeout(()=>{
-                    Fade(true)
-                    router.push(path)
-                },600) } 
+                onClick={()=>setTimeout(()=>{router.push(path)},600)} 
                 bg={bg}
             >
         <ContentCont bg={bg} op={op===1?0:1}>

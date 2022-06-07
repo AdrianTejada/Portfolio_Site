@@ -95,7 +95,6 @@ export default function Development() {
                     logowidth={"109px"}
                     logoheight={"119px"}
                     path={"/development/savetheplate"}
-                    Fade={(e)=>setFade(e)}
                   />
                   <ProjectCont
                     bg={"white"}
@@ -106,7 +105,6 @@ export default function Development() {
                     logowidth={"256px"}
                     logoheight={"239px"}
                     path={"/development/happyway"}
-                    Fade={(e)=>setFade(e)}
                   />
                 </ProjectsCont>  
             </ContentCont>

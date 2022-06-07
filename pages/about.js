@@ -3,7 +3,7 @@ import { Menu } from "@/comps/Menu"
 import { Header } from "@/comps/Header"
 import { Text } from "@/comps/Text"
 import { Colon } from "@/comps/Colon"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Footer } from "@/comps/Footer"
 import Image from "next/image"
 import src from '@/public/moi/IMG-0429.jpg'
@@ -16,6 +16,8 @@ const MainCont = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: -100vh;
+  opacity: ${props=>props.op};
+  transition: opacity .6s;
 `
 
 const ScaleDiv = styled.div`
@@ -73,8 +75,13 @@ const ImageCont = styled.div`
 export default function AboutMe() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
+  const [fade, setFade] = useState(true)
 
-  return <MainCont>
+  useEffect(()=>{
+    setFade(false)
+  },[])
+
+  return <MainCont op={fade == false ? 1 : 0}>
     <Head>
       <title>Adrian Tejada - About</title>
       <link rel="icon" href="AT.png"/>

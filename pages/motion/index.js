@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Menu } from "@/comps/Menu"
 import { Header } from "@/comps/Header"
 import { Colon } from "@/comps/Colon"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Footer } from "@/comps/Footer"
 import { ProjectCont } from "@/comps/ProjectCont"
 import ktoflogo from '@/public/hustg/logo.png'
@@ -17,6 +17,8 @@ const MainCont = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: -100vh;
+  opacity: ${props=>props.op};
+  transition: opacity .6s;
 `
 
 const ScaleDiv = styled.div`
@@ -50,8 +52,13 @@ const ProjectsCont = styled.div`
 export default function Motion() { 
   const [scale, setScale] = useState(1)
   const [z, setZ] = useState(1)
+  const [fade, setFade] = useState(true)
 
-  return <MainCont>
+  useEffect(()=>{
+    setFade(false)
+  },[])
+
+  return <MainCont op={fade == false ? 1 : 0}>
         <Head>
       <title>Adrian Tejada - Development</title>
       <link rel="icon" href="AT.png"/>
@@ -66,7 +73,9 @@ export default function Motion() {
         } else {
           setZ(-2)
         }
-      }}/>
+      }}
+      Fade={(e)=>setFade(e)}
+      />
 
       <ScaleDiv scale={scale===1?1:.98} z={z}>
         <ColonCont>

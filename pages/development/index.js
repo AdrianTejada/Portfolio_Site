@@ -7,6 +7,7 @@ import { Footer } from "@/comps/Footer"
 import { ProjectCont } from "@/comps/ProjectCont"
 import stpLogo from '@/public/stp/stp_logo.png'
 import Head from "next/head"
+import happywayLogo from '@/public/happyway/Happy_way-01.png'
 
 const MainCont = styled.main`
   width: 100vw;
@@ -75,7 +76,7 @@ export default function Development() {
                 />
                 <ProjectsCont>
                   <ProjectCont
-                    bg={"#E94168"}
+                    bg={"#F3AC81"}
                     txtcolor={"white"}
                     txt={"SaveThePlate"}
                     img={stpLogo}
@@ -86,12 +87,12 @@ export default function Development() {
                   />
                   <ProjectCont
                     bg={"white"}
-                    txtcolor={"black"}
+                    txtcolor={"#ed147b"}
                     txt={"Happyway"}
-                    img={stpLogo}
+                    img={happywayLogo}
                     alt={"The Happyway Logo"}
-                    logowidth={"109px"}
-                    logoheight={"119px"}
+                    logowidth={"256px"}
+                    logoheight={"239px"}
                     path={"/development/happyway"}
                   />
                 </ProjectsCont>  

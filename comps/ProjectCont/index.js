@@ -14,7 +14,9 @@ const MainCont = styled.div`
     margin: 10px;
     border: 2px solid #8c8c8c;
     @media only screen and (max-width: 700px) {
-
+        width: 140px;
+        height: 140px;
+        border-radius: 25px;
     }
 `
 
@@ -24,21 +26,45 @@ const ContentCont = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: ${props=>props.margintop};
     opacity: ${props=>props.op};
     background-color: ${props=>props.bg};
     transition: opacity .6s;
+    @media only screen and (max-width: 700px) {
+        min-width: 140px;
+        min-height: 140px;
+        transform: scale(.7);
+    }
+`
+
+const TextCont = styled.div`
+    min-width: 240px;
+    min-height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -240px;
+    opacity: ${props=>props.op};
+    background-color: ${props=>props.bg};
+    transition: opacity .6s;
+    @media only screen and (max-width: 700px) {
+        min-width: 140px;
+        min-height: 140px;
+        margin-top: -140px;
+    }
 `
 
 const ProjectText = styled.div`
     font-family: 'Gothic';
     color: ${props=>props.color};
     font-size: 30px;
+    text-align: center;
     -moz-user-select:none;
     -webkit-user-select: none;
     -ms-user-select: none;
     padding: 10px;
-    align-self: center;
+    @media only screen and (max-width: 700px) {
+        font-size: 20px;
+    }
 `
 
 export const ProjectCont = ({
@@ -63,10 +89,10 @@ export const ProjectCont = ({
                 height={logoheight}
             />
         </ContentCont>
-        <ContentCont margintop={"-240px"} op={op} bg={bg}>
+        <TextCont op={op} bg={bg}>
             <ProjectText color={txtcolor}>
                 {txt}
             </ProjectText>
-        </ContentCont>
+        </TextCont>
     </MainCont>
 }

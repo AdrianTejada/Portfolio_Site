@@ -167,7 +167,7 @@ export default function Home() {
             </Emoticon>
             <SubText>
               <TypeEffect
-                text="Front End Developer & Motion Graphics Designer"
+                text="Front-End Developer & Motion Graphics Designer"
               />
             </SubText>
           </SubCont>
@@ -182,7 +182,7 @@ export default function Home() {
               text="My Skill Set"
             />
             <SubHead
-              text="Front End Development"
+              text="Front-End Development"
             />
             <Text
               text="Thanks to my 2 years spent at the Digital Design and Development at BCIT, I have experience building web-applications in team environments using React.js, JavaScript, HTML, and CSS. My favorite parts of Front End Development are mapping out data from API’s on to the front-end, and coding out UI/UX interactions and animations."

@@ -110,7 +110,7 @@ export default function SaveThePlate() {
                     text="SaveThePlate"
                 />
                 <SubHead
-                  text="Role - Full Stack Developer"
+                  text="Role: Full Stack Developer"
                 />
                 <Text
                   text="An interdisciplinary project developed during one of my terms at BCIT. This project is called SaveThePlate, a business solution designed to reduce food waste while increasing restaurant profits. After extensive research and user testing, I helped to develop this project with my fellow team members. This application was built using React Native, PHP, MySQL, and Firebase."

@@ -38,6 +38,26 @@ const ContentCont = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    height: 90vh;
+`
+
+const LinkCont = styled.div`
+  margin-top: 50px;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-family: 'Source';
+  font-size: 18px;
+  @media only screen and (max-width: 700px) {
+    font-size: 8px;
+  }
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `
 
 export default function Happyway() { 
@@ -53,7 +73,7 @@ export default function Happyway() {
     <Head>
       <title>Adrian Tejada - Happyway</title>
       <link rel="icon" href="../AT.png"/>
-      <meta name="description" content="Work on SaveThePlate"/>
+      <meta name="description" content="Work for HappyWay"/>
     </Head>
       <Menu OnOpen={(e)=>{
         setScale(e)
@@ -76,14 +96,14 @@ export default function Happyway() {
                     text="Happyway"
                 />
                 <SubHead
-                  text="Role - Front End Developer"
+                  text="Role: Front-End Developer"
                 />
                 <Text
                   text="A web application I helped develop during my Internship at BCIT. Development version available upon request."
                 />
-                <Text style={{color: 'red'}}
-                  text="Link to project"
-                />
+                <LinkCont>
+                  Link to current build
+                </LinkCont>
 
             
             </ContentCont>

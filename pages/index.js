@@ -167,7 +167,7 @@ export default function Home() {
             </Emoticon>
             <SubText>
               <TypeEffect
-                text="Front-End Developer & Motion Graphics Designer"
+                text="Front End Developer & Motion Graphics Designer"
               />
             </SubText>
           </SubCont>

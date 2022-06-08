@@ -1,8 +1,11 @@
 LAST TINGS
+	- fade in guy
+	- make guy wave
+	- bobbbing up and down
+	- happyway thing
+
 	- fade scroll transitions with framer
 
 
 RANDOM IDEAS
 	- icons for menu items. when the icon is hovered text appears underneath the icon
-	- fade in for the waving guy then he waves when hes fully faded in
-	- guy at the bottom is bobbing up and down
